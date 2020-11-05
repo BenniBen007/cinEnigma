@@ -37,6 +37,7 @@ public class CritiqueListAdapter extends RecyclerView.Adapter<CritiqueListAdapte
             return;
         }
 
+        //Récupération de tous les champs du tuple
         String titreFilmGet = mCursor.getString(mCursor.getColumnIndex(Critique.CritiqueEntree.COLUMN_TITRE));
         String dateHeureGet = mCursor.getString(mCursor.getColumnIndex(Critique.CritiqueEntree.COLUMN_DATEHEURE));
         String noteScenarioGet = mCursor.getString(mCursor.getColumnIndex(Critique.CritiqueEntree.COLUMN_NOTESCENARIO));
@@ -44,8 +45,10 @@ public class CritiqueListAdapter extends RecyclerView.Adapter<CritiqueListAdapte
         String noteMusiqueGet = mCursor.getString(mCursor.getColumnIndex(Critique.CritiqueEntree.COLUMN_NOTEMUSIQUE));
         String descriptionGet = mCursor.getString(mCursor.getColumnIndex(Critique.CritiqueEntree.COLUMN_DESCRIPTION));
 
+        //Recuperation de l'id du tuple
         long id = mCursor.getLong(mCursor.getColumnIndex(Critique.CritiqueEntree._ID));
 
+        //Affichage dans le RecyclerView
         holder.titreFilm.setText(titreFilmGet);
         holder.dateHeureFilm.setText(dateHeureGet);
         holder.noteScenario.setText(noteScenarioGet);
@@ -53,6 +56,7 @@ public class CritiqueListAdapter extends RecyclerView.Adapter<CritiqueListAdapte
         holder.noteMusique.setText(noteMusiqueGet);
         holder.description.setText(descriptionGet);
 
+        //Défintion du tag
         holder.itemView.setTag(id);
     }
 
@@ -61,19 +65,9 @@ public class CritiqueListAdapter extends RecyclerView.Adapter<CritiqueListAdapte
         return mCursor.getCount();
     }
 
-
-    public void swapCursor(Cursor newCursor) {
-        // Always close the previous mCursor first
-        if (mCursor != null) mCursor.close();
-        mCursor = newCursor;
-        if (newCursor != null) {
-            // Force the RecyclerView to refresh
-            this.notifyDataSetChanged();
-        }
-    }
-
     class CritiqueViewHolder extends RecyclerView.ViewHolder {
 
+        //Création des textview qui vont contenir les varaibles
         TextView titreFilm;
         TextView dateHeureFilm;
         TextView noteScenario;
@@ -83,6 +77,7 @@ public class CritiqueListAdapter extends RecyclerView.Adapter<CritiqueListAdapte
 
         public CritiqueViewHolder(View itemView) {
             super(itemView);
+            //Liaison entre les variables et le layout
             titreFilm = (TextView) itemView.findViewById(R.id.titreFilmShow);
             dateHeureFilm = (TextView) itemView.findViewById(R.id.dateHeureShow);
             noteScenario = (TextView) itemView.findViewById(R.id.noteScenarioShow);
