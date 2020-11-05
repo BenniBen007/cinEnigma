@@ -1,0 +1,139 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelTitreFilm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titre du film" />
+
+        <EditText
+            android:id="@+id/editTextFilm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelDateHeure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date et heure de la projection" />
+
+        <EditText
+            android:id="@+id/editDateHeure"
+            android:minWidth="100dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelNoteScenario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note scénario" />
+
+        <EditText
+            android:id="@+id/editNoteScenario"
+            android:minWidth="100dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@android:drawable/editbox_background"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelNoteRealisation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note realisation" />
+
+        <EditText
+            android:id="@+id/editNoteRealisation"
+            android:minWidth="100dip"
+            android:layout_width="wrap_content"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelNoteMusique"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note musique" />
+
+        <EditText
+            android:id="@+id/editNoteMusique"
+            android:minWidth="100dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@android:drawable/editbox_background"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description" />
+
+        <EditText
+            android:id="@+id/editDescription"
+            android:minWidth="100dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"/>
+    </LinearLayout>
+
+    <Button android:id="@+id/Envoyer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Envoyer"
+        android:onClick="onClickEnvoyerButton"/>
+
+    <Button android:id="@+id/allCritiques"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Voir toutes les critiques" />
+
+
+</LinearLayout>
